@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.cnblogs.com/obel/p/7016414.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="origin">
+<title>js数组方法大全 - 流sand - 博客园</title>
+<meta property="og:description" content="JavaScript中创建数组有两种方式 （一）使用 Array 构造函数： （二）使用数组字面量表示法： 数组的方法有数组原型方法，也有从object对象继承来的方法，这里我们只介绍数组的原型方法，">
+<link type="text/css" rel="stylesheet" href="./js数组方法大全 - 流sand - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./js数组方法大全 - 流sand - 博客园_files/bundle-coffee.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./js数组方法大全 - 流sand - 博客园_files/bundle-coffee-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/obel/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/obel/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/obel/wlwmanifest.xml">
+<script src="./js数组方法大全 - 流sand - 博客园_files/f.txt"></script><script src="./js数组方法大全 - 流sand - 博客园_files/amp4ads-host-v0.js.下载"></script><script src="./js数组方法大全 - 流sand - 博客园_files/pubads_impl_rendering_265.js.下载"></script><script async="" src="./js数组方法大全 - 流sand - 博客园_files/analytics.js.下载"></script><script src="./js数组方法大全 - 流sand - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+<script type="text/javascript">var currentBlogApp = 'obel', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./js数组方法大全 - 流sand - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+<link rel="preload" href="./js数组方法大全 - 流sand - 博客园_files/f(1).txt" as="script"><script type="text/javascript" src="./js数组方法大全 - 流sand - 博客园_files/f(1).txt"></script><script src="./js数组方法大全 - 流sand - 博客园_files/pubads_impl_265.js.下载" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-30/html/container.html"></head>
+<body cz-shortcut-listen="true">
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/obel/"><img id="blogLogo" src="./js数组方法大全 - 流sand - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/obel/">流sand</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/obel/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E6%B5%81sand">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/obel/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/obel/rss"><img src="./js数组方法大全 - 流sand - 博客园_files/xml.gif" alt="订阅"></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 2&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/obel/p/7016414.html">js数组方法大全</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p><span style="color: #2f79cf"><strong>JavaScript中创建数组有两种方式</strong></span></p>
+<p><span style="color: #2f79cf"><strong>（一）使用 Array 构造函数：</strong></span></p>
+<p>&nbsp;</p>
+<pre>var arr1 = new Array(); //创建一个空数组<br>var arr2 = new Array(20); // 创建一个包含20项的数组<br>var arr3 = new Array("lily","lucy","Tom"); // 创建一个包含3个字符串的数组</pre>
+<p>&nbsp;</p>
+<p><span style="color: #2f79cf"><strong><strong>（二）使用数组字面量表示法：</strong></strong></span></p>
+<p>&nbsp;</p>
+<pre>var arr4 = []; //创建一个空数组<br>var arr5 = [20]; // 创建一个包含1项的数组<br>var arr6 = ["lily","lucy","Tom"]; // 创建一个包含3个字符串的数组</pre>
+<p>&nbsp;</p>
+<div class="line number1 index0 alt2">
+<p>数组的方法有数组原型方法，也有从object对象继承来的方法，这里我们只介绍数组的原型方法，数组原型方法主要有以下这些：</p>
+<p>join()<br>push()和pop()<br>shift() 和 unshift()<br>sort()<br>reverse()<br>concat()<br>slice()<br>splice()<br>indexOf()和 lastIndexOf() （ES5新增）<br>forEach() （ES5新增）<br>map() （ES5新增）<br>filter() （ES5新增）<br>every() （ES5新增）<br>some() （ES5新增）<br>reduce()和 reduceRight() （ES5新增）</p>
+<pre><br><br></pre>
+<p>下面详细介绍一下各个方法的基本功能。</p>
+<p><strong>1、join()</strong></p>
+<p>join(separator): 将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符，该方法只接收一个参数：即分隔符。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_477635" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1,2,3];</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">console.log(arr.join()); </code><code class="js comments">// 1,2,3</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arr.join(</code><code class="js string">"-"</code><code class="js plain">)); </code><code class="js comments">// 1-2-3</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">// [1, 2, 3]（原数组不变）</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>通过join()方法可以实现重复字符串，只需传入字符串以及重复的次数，就能返回重复后的字符串，函数如下：</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_740560" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">function</code> <code class="js plain">repeatString(str, n) {</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">return</code> <code class="js keyword">new</code> <code class="js plain">Array(n + 1).join(str);</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">}</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(repeatString(</code><code class="js string">"abc"</code><code class="js plain">, 3)); </code><code class="js comments">// abcabcabc</code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(repeatString(</code><code class="js string">"Hi"</code><code class="js plain">, 5)); </code><code class="js comments">// HiHiHiHiHi</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>2、push()和pop()</strong></p>
+<p>push(): 可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。&nbsp;<br>pop()：数组末尾移除最后一项，减少数组的 length 值，然后返回移除的项。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_553234" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [</code><code class="js string">"Lily"</code><code class="js plain">,</code><code class="js string">"lucy"</code><code class="js plain">,</code><code class="js string">"Tom"</code><code class="js plain">];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">count = arr.push(</code><code class="js string">"Jack"</code><code class="js plain">,</code><code class="js string">"Sean"</code><code class="js plain">);</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(count); </code><code class="js comments">// 5</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">// ["Lily", "lucy", "Tom", "Jack", "Sean"]</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">var</code> <code class="js plain">item = arr.pop();</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">console.log(item); </code><code class="js comments">// Sean</code></div>
+<div class="line number7 index6 alt2"><code class="js plain">console.log(arr); </code><code class="js comments">// ["Lily", "lucy", "Tom", "Jack"]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>3、shift() 和 unshift()</strong></p>
+<p>shift()：删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined 。&nbsp;<br>unshift:将参数添加到原数组开头，并返回数组的长度 。</p>
+<p>这组方法和上面的push()和pop()方法正好对应，一个是操作数组的开头，一个是操作数组的结尾。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_223215" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [</code><code class="js string">"Lily"</code><code class="js plain">,</code><code class="js string">"lucy"</code><code class="js plain">,</code><code class="js string">"Tom"</code><code class="js plain">];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">count = arr.unshift(</code><code class="js string">"Jack"</code><code class="js plain">,</code><code class="js string">"Sean"</code><code class="js plain">);</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(count); </code><code class="js comments">// 5</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">//["Jack", "Sean", "Lily", "lucy", "Tom"]</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">var</code> <code class="js plain">item = arr.shift();</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">console.log(item); </code><code class="js comments">// Jack</code></div>
+<div class="line number7 index6 alt2"><code class="js plain">console.log(arr); </code><code class="js comments">// ["Sean", "Lily", "lucy", "Tom"]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>4、sort()</strong></p>
+<p>sort()：按升序排列数组项——即最小的值位于最前面，最大的值排在最后面。</p>
+<p>在排序时，sort()方法会调用每个数组项的 toString()转型方法，然后比较得到的字符串，以确定如何排序。即使数组中的每一项都是数值， sort()方法比较的也是字符串，因此会出现以下的这种情况：</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_454978" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr1 = [</code><code class="js string">"a"</code><code class="js plain">, </code><code class="js string">"d"</code><code class="js plain">, </code><code class="js string">"c"</code><code class="js plain">, </code><code class="js string">"b"</code><code class="js plain">];</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">console.log(arr1.sort()); </code><code class="js comments">// ["a", "b", "c", "d"]</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">arr2 = [13, 24, 51, 3];</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr2.sort()); </code><code class="js comments">// [13, 24, 3, 51]</code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr2); </code><code class="js comments">// [13, 24, 3, 51](元数组被改变)</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p>为了解决上述问题，sort()方法可以接收一个比较函数作为参数，以便我们指定哪个值位于哪个值的前面。比较函数接收两个参数，如果第一个参数应该位于第二个之前则返回一个负数，如果两个参数相等则返回 0，如果第一个参数应该位于第二个之后则返回一个正数。以下就是一个简单的比较函数：</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_838819" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">function</code> <code class="js plain">compare(value1, value2) {</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">if</code> <code class="js plain">(value1 &lt; value2) {</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">-1;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">} </code><code class="js keyword">else</code> <code class="js keyword">if</code> <code class="js plain">(value1 &gt; value2) {</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">return</code> <code class="js plain">1;</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">} </code><code class="js keyword">else</code> <code class="js plain">{</code></div>
+<div class="line number7 index6 alt2"><code class="js keyword">return</code> <code class="js plain">0;</code></div>
+<div class="line number8 index7 alt1"><code class="js plain">}</code></div>
+<div class="line number9 index8 alt2"><code class="js plain">}</code></div>
+<div class="line number10 index9 alt1"><code class="js plain">arr2 = [13, 24, 51, 3];</code></div>
+<div class="line number11 index10 alt2"><code class="js plain">console.log(arr2.sort(compare)); </code><code class="js comments">// [3, 13, 24, 51]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p>如果需要通过比较函数产生降序排序的结果，只要交换比较函数返回的值即可：</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_208650" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">function</code> <code class="js plain">compare(value1, value2) {</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">if</code> <code class="js plain">(value1 &lt; value2) {</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">1;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">} </code><code class="js keyword">else</code> <code class="js keyword">if</code> <code class="js plain">(value1 &gt; value2) {</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">return</code> <code class="js plain">-1;</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">} </code><code class="js keyword">else</code> <code class="js plain">{</code></div>
+<div class="line number7 index6 alt2"><code class="js keyword">return</code> <code class="js plain">0;</code></div>
+<div class="line number8 index7 alt1"><code class="js plain">}</code></div>
+<div class="line number9 index8 alt2"><code class="js plain">}</code></div>
+<div class="line number10 index9 alt1"><code class="js plain">arr2 = [13, 24, 51, 3];</code></div>
+<div class="line number11 index10 alt2"><code class="js plain">console.log(arr2.sort(compare)); </code><code class="js comments">// [51, 24, 13, 3]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>5、reverse()</strong></p>
+<p>reverse()：反转数组项的顺序。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_477262" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [13, 24, 51, 3];</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">console.log(arr.reverse()); </code><code class="js comments">//[3, 51, 24, 13]</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arr); </code><code class="js comments">//[3, 51, 24, 13](原数组改变)</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>6、concat()</strong></p>
+<p>concat() ：将参数添加到原数组中。这个方法会先创建当前数组一个副本，然后将接收到的参数添加到这个副本的末尾，最后返回新构建的数组。在没有给 concat()方法传递参数的情况下，它只是复制当前数组并返回副本。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_905103" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1,3,5,7];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arrCopy = arr.concat(9,[11,13]);</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arrCopy); </code><code class="js comments">//[1, 3, 5, 7, 9, 11, 13]</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">// [1, 3, 5, 7](原数组未被修改)</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p>从上面测试结果可以发现：传入的不是数组，则直接把参数添加到数组后面，如果传入的是数组，则将数组中的各个项添加到数组中。但是如果传入的是一个二维数组呢？</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_222209" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arrCopy2 = arr.concat([9,[11,13]]);</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">console.log(arrCopy2); </code><code class="js comments">//[1, 3, 5, 7, 9, Array[2]]</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arrCopy2[5]); </code><code class="js comments">//[11, 13]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p>上述代码中，arrCopy2数组的第五项是一个包含两项的数组，也就是说concat方法只能将传入数组中的每一项添加到数组中，如果传入数组中有些项是数组，那么也会把这一数组项当作一项添加到arrCopy2中。</p>
+<p><strong>7、slice()</strong></p>
+<p>slice()：返回从原数组中指定开始下标到结束下标之间的项组成的新数组。slice()方法可以接受一或两个参数，即要返回项的起始和结束位置。在只有一个参数的情况下， slice()方法返回从该参数指定位置开始到当前数组末尾的所有项。如果有两个参数，该方法返回起始和结束位置之间的项——但不包括结束位置的项。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_960090" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1,3,5,7,9,11];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arrCopy = arr.slice(1);</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">var</code> <code class="js plain">arrCopy2 = arr.slice(1,4);</code></div>
+<div class="line number4 index3 alt1"><code class="js keyword">var</code> <code class="js plain">arrCopy3 = arr.slice(1,-2);</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">var</code> <code class="js plain">arrCopy4 = arr.slice(-4,-1);</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">//[1, 3, 5, 7, 9, 11](原数组没变)</code></div>
+<div class="line number7 index6 alt2"><code class="js plain">console.log(arrCopy); </code><code class="js comments">//[3, 5, 7, 9, 11]</code></div>
+<div class="line number8 index7 alt1"><code class="js plain">console.log(arrCopy2); </code><code class="js comments">//[3, 5, 7]</code></div>
+<div class="line number9 index8 alt2"><code class="js plain">console.log(arrCopy3); </code><code class="js comments">//[3, 5, 7]</code></div>
+<div class="line number10 index9 alt1"><code class="js plain">console.log(arrCopy4); </code><code class="js comments">//[5, 7, 9]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p>arrCopy只设置了一个参数，也就是起始下标为1，所以返回的数组为下标1（包括下标1）开始到数组最后。&nbsp;<br>arrCopy2设置了两个参数，返回起始下标（包括1）开始到终止下标（不包括4）的子数组。&nbsp;<br>arrCopy3设置了两个参数，终止下标为负数，当出现负数时，将负数加上数组长度的值（6）来替换该位置的数，因此就是从1开始到4（不包括）的子数组。&nbsp;<br>arrCopy4中两个参数都是负数，所以都加上数组长度6转换成正数，因此相当于slice(2,5)。</p>
+<p><strong>8、splice()</strong></p>
+<p>splice()：很强大的数组方法，它有很多种用法，可以实现删除、插入和替换。</p>
+<p>删除：可以删除任意数量的项，只需指定 2 个参数：要删除的第一项的位置和要删除的项数。例如， splice(0,2)会删除数组中的前两项。</p>
+<p>插入：可以向指定位置插入任意数量的项，只需提供 3 个参数：起始位置、 0（要删除的项数）和要插入的项。例如，splice(2,0,4,6)会从当前数组的位置 2 开始插入4和6。<br>替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定 3 个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。例如，splice (2,1,4,6)会删除当前数组位置 2 的项，然后再从位置 2 开始插入4和6。</p>
+<p>splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项，如果没有删除任何项，则返回一个空数组。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_412961" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1,3,5,7,9,11];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arrRemoved = arr.splice(0,2);</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arr); </code><code class="js comments">//[5, 7, 9, 11]</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arrRemoved); </code><code class="js comments">//[1, 3]</code></div>
+<div class="line number5 index4 alt2"><code class="js keyword">var</code> <code class="js plain">arrRemoved2 = arr.splice(2,0,4,6);</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">console.log(arr); </code><code class="js comments">// [5, 7, 4, 6, 9, 11]</code></div>
+<div class="line number7 index6 alt2"><code class="js plain">console.log(arrRemoved2); </code><code class="js comments">// []</code></div>
+<div class="line number8 index7 alt1"><code class="js keyword">var</code> <code class="js plain">arrRemoved3 = arr.splice(1,1,2,4);</code></div>
+<div class="line number9 index8 alt2"><code class="js plain">console.log(arr); </code><code class="js comments">// [5, 2, 4, 4, 6, 9, 11]</code></div>
+<div class="line number10 index9 alt1"><code class="js plain">console.log(arrRemoved3); </code><code class="js comments">//[7]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>9、indexOf()和 lastIndexOf()</strong></p>
+<p>indexOf()：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的开头（位置 0）开始向后查找。&nbsp;<br>lastIndexOf：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的末尾开始向前查找。</p>
+<p>这两个方法都返回要查找的项在数组中的位置，或者在没找到的情况下返回1。在比较第一个参数与数组中的每一项时，会使用全等操作符。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_200981" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1,3,5,7,7,5,3,1];</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">console.log(arr.indexOf(5)); </code><code class="js comments">//2</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(arr.lastIndexOf(5)); </code><code class="js comments">//5</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">console.log(arr.indexOf(5,2)); </code><code class="js comments">//2</code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr.lastIndexOf(5,4)); </code><code class="js comments">//2</code></div>
+<div class="line number6 index5 alt1"><code class="js plain">console.log(arr.indexOf(</code><code class="js string">"5"</code><code class="js plain">)); </code><code class="js comments">//-1</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>10、forEach()</strong></p>
+<p>forEach()：对数组进行遍历循环，对数组中的每一项运行给定函数。这个方法没有返回值。参数都是function类型，默认有传参，参数分别为：遍历的数组内容；第对应的数组索引，数组本身。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_154662" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1, 2, 3, 4, 5];</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">arr.forEach(</code><code class="js keyword">function</code><code class="js plain">(x, index, a){</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">console.log(x + </code><code class="js string">'|'</code> <code class="js plain">+ index + </code><code class="js string">'|'</code> <code class="js plain">+ (a === arr));</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">});</code></div>
+<div class="line number5 index4 alt2"><code class="js comments">// 输出为：</code></div>
+<div class="line number6 index5 alt1"><code class="js comments">// 1|0|true</code></div>
+<div class="line number7 index6 alt2"><code class="js comments">// 2|1|true</code></div>
+<div class="line number8 index7 alt1"><code class="js comments">// 3|2|true</code></div>
+<div class="line number9 index8 alt2"><code class="js comments">// 4|3|true</code></div>
+<div class="line number10 index9 alt1"><code class="js comments">// 5|4|true</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>11、map()</strong></p>
+<p>map()：指“映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</p>
+<p>下面代码利用map方法实现数组中每个数求平方。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_5159" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1, 2, 3, 4, 5];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arr2 = arr.map(</code><code class="js keyword">function</code><code class="js plain">(item){</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">item*item;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">});</code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr2); </code><code class="js comments">//[1, 4, 9, 16, 25]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>12、filter()</strong></p>
+<p>filter()：“过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_771040" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arr2 = arr.filter(</code><code class="js keyword">function</code><code class="js plain">(x, index) {</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">index % 3 === 0 || x &gt;= 8;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">}); </code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr2); </code><code class="js comments">//[1, 4, 7, 8, 9, 10]</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>13、every()</strong></p>
+<p>every()：判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_325191" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1, 2, 3, 4, 5];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arr2 = arr.every(</code><code class="js keyword">function</code><code class="js plain">(x) {</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">x &lt; 10;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">}); </code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr2); </code><code class="js comments">//true</code></div>
+<div class="line number6 index5 alt1"><code class="js keyword">var</code> <code class="js plain">arr3 = arr.every(</code><code class="js keyword">function</code><code class="js plain">(x) {</code></div>
+<div class="line number7 index6 alt2"><code class="js keyword">return</code> <code class="js plain">x &lt; 3;</code></div>
+<div class="line number8 index7 alt1"><code class="js plain">}); </code></div>
+<div class="line number9 index8 alt2"><code class="js plain">console.log(arr3); </code><code class="js comments">// false</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>14、some()</strong></p>
+<p>some()：判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_651062" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">arr = [1, 2, 3, 4, 5];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">arr2 = arr.some(</code><code class="js keyword">function</code><code class="js plain">(x) {</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">x &lt; 3;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">}); </code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(arr2); </code><code class="js comments">//true</code></div>
+<div class="line number6 index5 alt1"><code class="js keyword">var</code> <code class="js plain">arr3 = arr.some(</code><code class="js keyword">function</code><code class="js plain">(x) {</code></div>
+<div class="line number7 index6 alt2"><code class="js keyword">return</code> <code class="js plain">x &lt; 1;</code></div>
+<div class="line number8 index7 alt1"><code class="js plain">}); </code></div>
+<div class="line number9 index8 alt2"><code class="js plain">console.log(arr3); </code><code class="js comments">// false</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<p><strong>15、reduce()和 reduceRight()</strong></p>
+<p>这两个方法都会实现迭代数组的所有项，然后构建一个最终返回的值。reduce()方法从数组的第一项开始，逐个遍历到最后。而 reduceRight()则从数组的最后一项开始，向前遍历到第一项。</p>
+<p>这两个方法都接收两个参数：一个在每一项上调用的函数和（可选的）作为归并基础的初始值。</p>
+<p>传给 reduce()和 reduceRight()的函数接收 4 个参数：前一个值、当前值、项的索引和数组对象。这个函数返回的任何值都会作为第一个参数自动传给下一项。第一次迭代发生在数组的第二项上，因此第一个参数是数组的第一项，第二个参数就是数组的第二项。</p>
+<p>下面代码用reduce()实现数组求和，数组一开始加了一个初始值10。</p>
+<div class="jb51code">
+<div>
+<div id="highlighter_877976" class="syntaxhighlighter  js">
+<div class="toolbar"><a class="toolbar_item command_help help" href="http://www.jb51.net/article/87930.htm#">?</a></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+
+
+
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">values = [1,2,3,4,5];</code></div>
+<div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">sum = values.reduceRight(</code><code class="js keyword">function</code><code class="js plain">(prev, cur, index, array){</code></div>
+<div class="line number3 index2 alt2"><code class="js keyword">return</code> <code class="js plain">prev + cur;</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">},10);</code></div>
+<div class="line number5 index4 alt2"><code class="js plain">console.log(sum); </code><code class="js comments">//25</code></div>
+
+
+
+</div>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="line number3 index2 alt2">&nbsp;</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="https://www.cnblogs.com/obel/category/1018997.html" target="_blank">javascript</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7016414,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;a653c94e-6607-e211-aa3f-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./js数组方法大全 - 流sand - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./js数组方法大全 - 流sand - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/obel/" target="_blank"><img src="./js数组方法大全 - 流sand - 博客园_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/obel/">流sand</a><br>
+            <a href="http://home.cnblogs.com/u/obel/followees">关注 - 0</a><br>
+            <a href="http://home.cnblogs.com/u/obel/followers">粉丝 - 6</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;a653c94e-6607-e211-aa3f-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(7016414,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">11</span>
+    </div>
+    <div class="buryit" onclick="votePost(7016414,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2017-06-15 11:06</span> <a href="https://www.cnblogs.com/obel/">流sand</a> 阅读(<span id="post_view_count">56540</span>) 评论(<span id="post_comment_count">3</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=7016414" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/obel/p/7016414.html#" onclick="AddToWz(7016414);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=361426,cb_entryId=7016414,cb_blogApp=currentBlogApp,cb_blogUserGuid='a653c94e-6607-e211-aa3f-842b2b196315',cb_entryCreatedDate='2017/6/15 11:06:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<div class="feedback_area_title">评论</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/obel/p/7016414.html#4028939" class="layer">#1楼</a><a name="4028939" id="comment_anchor_4028939"></a> <span class="comment_date">2018-07-26 00:46</span> | <a id="a_comment_author_4028939" href="https://www.cnblogs.com/ukzq/" target="_blank">wizard_Q</a> <a href="http://msg.cnblogs.com/send/wizard_Q" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_4028939" class="blog_comment_body">收藏了~谢谢分享</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4028939,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(4028939,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_4028939_avatar" style="display:none;">http://pic.cnblogs.com/face/1030087/20180511102509.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/obel/p/7016414.html#4049173" class="layer">#2楼</a><a name="4049173" id="comment_anchor_4049173"></a> <span class="comment_date">2018-08-23 16:11</span> | <a id="a_comment_author_4049173" href="http://home.cnblogs.com/u/1471261/" target="_blank">T-L-M</a> <a href="http://msg.cnblogs.com/send/T-L-M" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_4049173" class="blog_comment_body">已收藏</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4049173,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(4049173,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/obel/p/7016414.html#4050091" class="layer">#3楼</a><a name="4050091" id="comment_anchor_4050091"></a><span id="comment-maxId" style="display:none;">4050091</span><span id="comment-maxDate" style="display:none;">2018/8/24 17:17:17</span> <span class="comment_date">2018-08-24 17:17</span> | <a id="a_comment_author_4050091" href="https://www.cnblogs.com/HappyYawen/" target="_blank">happyYawen</a> <a href="http://msg.cnblogs.com/send/happyYawen" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_4050091" class="blog_comment_body">es6也新增了很多api</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4050091,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(4050091,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_4050091_avatar" style="display:none;">http://pic.cnblogs.com/face/1332769/20180424154751.png</span>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/obel/p/7016414.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/obel/p/7016414.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】超50万VC++源码: 大型组态工控、电力仿真CAD与GIS源码库！</a><br><a href="http://clickc.admaster.com.cn/c/a116493,b2949399,c1705,i0,m101,8a1,8b3,h" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-华为云&#39;)">【推荐】华为云11.11普惠季 血拼风暴 一促即发</a><br><a href="https://group.cnblogs.com/topic/80253.html" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-拼团&#39;)">【拼团】腾讯云服务器拼团活动又双叒叕来了！</a><br><a href="https://cloud.tencent.com/act/domainsales?fromSource=gwzcw.1351351.1351351.1351351" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-域名&#39;)">【推荐】腾讯云新注册用户域名抢购1元起</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://cloud.tencent.com/act/special/amd?fromSource=gwzcw.1351353.1351353.1351353" target="_blank"><img width="300" height="250" src="./js数组方法大全 - 流sand - 博客园_files/24442-20181008121639348-1607410764.jpg" alt="腾讯云1008" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;C1&#39;);"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/609878/" target="_blank">贾跃亭与恒大仲裁结果出炉前 恒大法拉第在北京成立汽车科技公司</a><br> ·  <a href="https://news.cnblogs.com/n/609884/" target="_blank">德国软件巨头SAP第三季度营收60.2亿欧元 同比增长8%</a><br> ·  <a href="https://news.cnblogs.com/n/609881/" target="_blank">阿里巴巴20亿入股酒类电商1919 成其第二大股东</a><br> ·  <a href="https://news.cnblogs.com/n/609880/" target="_blank">美国警方被曝从车载娱乐信息系统中挖掘私人信息 删了也能找回</a><br> ·  <a href="https://news.cnblogs.com/n/609883/" target="_blank">打车服务公司Uber发行垃圾债券融资20亿美元</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<script async="async" src="./js数组方法大全 - 流sand - 博客园_files/gpt.js.下载"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<div id="cnblogs_c2" class="c_ad_block">
+    <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CNfTtdLvj94CFQtolgod9J8HPA">
+    <script>
+    if (new Date() >= new Date(2018, 9, 13)) {
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1539008685004-0'); });
+    }
+    </script>
+    <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./js数组方法大全 - 流sand - 博客园_files/saved_resource.html"></iframe></div></div>
+</div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="https://kb.cnblogs.com/page/609730/" target="_blank">阿里云的这群疯子</a><br> ·  <a href="https://kb.cnblogs.com/page/606682/" target="_blank">为什么说 Java 程序员必须掌握 Spring Boot ？</a><br> ·  <a href="https://kb.cnblogs.com/page/606645/" target="_blank">在学习中，有一个比掌握知识更重要的能力</a><br> ·  <a href="https://kb.cnblogs.com/page/603663/" target="_blank">如何招到一个靠谱的程序员</a><br> ·  <a href="https://kb.cnblogs.com/page/573614/" target="_blank">一个故事看懂“区块链”</a><br></div>» <a href="https://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/obel/">流sand</a><br>园龄：<a href="https://home.cnblogs.com/u/obel/" title="入园时间：2012-09-26">6年</a><br>粉丝：<a href="https://home.cnblogs.com/u/obel/followers/">6</a><br>关注：<a href="https://home.cnblogs.com/u/obel/followees/">0</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;a653c94e-6607-e211-aa3f-842b2b196315&#39;)">+加关注</a></div><script>getFollowStatus('a653c94e-6607-e211-aa3f-842b2b196315')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/09/01&#39;);return false;">&lt;</a></td><td align="center">2018年10月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/11/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">30</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td class="CalWeekendDay" align="center">6</td></tr><tr><td class="CalWeekendDay" align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td class="CalWeekendDay" align="center">13</td></tr><tr><td class="CalWeekendDay" align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td class="CalTodayDay" align="center">18</td><td align="center">19</td><td class="CalWeekendDay" align="center">20</td></tr><tr><td class="CalWeekendDay" align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td class="CalWeekendDay" align="center">27</td></tr><tr><td class="CalWeekendDay" align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td></tr><tr><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/obel/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="https://www.cnblogs.com/obel/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="https://www.cnblogs.com/obel/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="https://www.cnblogs.com/obel/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="https://www.cnblogs.com/obel/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="https://www.cnblogs.com/obel/p/7016414.html#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="https://www.cnblogs.com/obel/category/1018997.html">javascript(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="https://www.cnblogs.com/obel/category/1022974.html">node(1)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="https://www.cnblogs.com/obel/archive/2017/06.html">2017年6月 (2)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/obel/p/7016414.html#4050091">1. Re:js数组方法大全</a></li>
+        <li class="recent_comment_body">es6也新增了很多api</li>
+        <li class="recent_comment_author">--happyYawen</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/obel/p/7016414.html#4049173">2. Re:js数组方法大全</a></li>
+        <li class="recent_comment_body">已收藏</li>
+        <li class="recent_comment_author">--T-L-M</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/obel/p/7016414.html#4028939">3. Re:js数组方法大全</a></li>
+        <li class="recent_comment_body">收藏了~谢谢分享</li>
+        <li class="recent_comment_author">--wizard_Q</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/obel/p/7016414.html">1. js数组方法大全(56534)</a></li><li><a href="https://www.cnblogs.com/obel/p/7066026.html">2. unhandledRejection事件(14)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/obel/p/7016414.html">1. js数组方法大全(3)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/obel/p/7016414.html">1. js数组方法大全(11)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 流sand
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<iframe id="google_osd_static_frame_4816613417071" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./js数组方法大全 - 流sand - 博客园_files/saved_resource(1).html"></iframe></body></html>
